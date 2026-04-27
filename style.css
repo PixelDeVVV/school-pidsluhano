@@ -72,28 +72,24 @@ p { font-size: 0.9rem; opacity: 0.8; }
 
 /* --- КАРТКА (масштаб 1:1 до хедера) --- */
 .glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 18px;
-    overflow: hidden;
-    transition: 0.3s;
-    width: 100%; /* Займає всю ширину контейнера (400px) */
+    max-width: 350px !important; /* Робить саму картку вужчою */
+    margin: 0 auto 20px auto !important; /* Центрує картку */
 }
 
 .card-image-wrap {
-    width: 100%;
-    padding: 8px; /* Акуратна рамка навколо фото */
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 10px !important;
 }
 
 .glass-card img {
-    width: 100%;
-    height: auto; /* Тепер фото не обрізається, а підлаштовується */
-    max-height: 450px; 
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
+    /* ОСЬ ТУТ МИ РОБИМО ФОТО МАЛЕНЬКИМ */
+    width: auto !important; 
+    max-width: 100% !important;
+    height: 250px !important; /* Жорстко обмежуємо висоту */
+    object-fit: contain !important; /* Щоб фото не обрізалося, а вписувалося в 250px */
+    border-radius: 10px !important;
 }
 
 .post-content {
